@@ -28,6 +28,19 @@
 			"problemMatcher": [],
 			"isBackground": false,
 			"dependsOn": "build"
+		},
+		{
+			"label": "test",
+			"type": "shell",
+			"command": "dotnet",
+			"args": [
+				"test",
+				"ConsoleApp.csproj"
+			],
+			"group": "test",
+			"problemMatcher": [],
+			"isBackground": false,
+			"dependsOn": "build"
 		}
 	]
 }
