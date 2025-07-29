@@ -1,3 +1,4 @@
+using System.Runtime;
 using NUnit.Framework;
 
 namespace ConsoleApp.Tests
@@ -8,6 +9,16 @@ namespace ConsoleApp.Tests
     [TestFixture]
     public class SquareSumTests
     {
+        [Test]
+        public void Try_With_Longer_Tab()
+        {
+            int[] input = { 1, 1, 1, 1, 1, 3 };
+            int result = Program.SquareSum(input);
+            int correct_value = 14;
+
+            Assert.That(result, Is.EqualTo(correct_value));
+        }
+
         [Test]
         public void SquareSum_WithValidNumbers_ReturnsCorrectSum()
         {

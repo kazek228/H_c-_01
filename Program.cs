@@ -1,37 +1,29 @@
-﻿/// <summary>
-/// Main program class for the console application
-/// </summary>
+﻿
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
+
 public class Program
 {
-    /// <summary>
-    /// Entry point of the application
-    /// </summary>
-    /// <param name="args">Command line arguments</param>
     public static void Main(string[] args)
     {
         Console.WriteLine("Hello Lukasz let's get started!!");
-        
-        // Test the SquareSum method
-        int[] testNumbers = { 1, 2, 2 };
-        int result = SquareSum(testNumbers);
-        Console.WriteLine($"Square sum of [{string.Join(", ", testNumbers)}] = {result}");
-    }
+        int[] test1 = { 1, 2, 3 };
+        int sum = SquareSum(test1);
+        Console.WriteLine(string.Join(" ", sum));
 
-    /// <summary>
-    /// Calculates the sum of squares of all numbers in the array
-    /// </summary>
-    /// <param name="numbers">Array of integers to process</param>
-    /// <returns>Sum of squares of all numbers</returns>
+    }
     public static int SquareSum(int[] numbers)
     {
+        int sum = 0; 
         if (numbers == null || numbers.Length == 0)
+        {
             return 0;
-
-        int sum = 0;
+        }
         foreach (int number in numbers)
         {
-            sum += number * number;
-        }
+            sum += number * number; 
+         }
+
         return sum;
     }
 }
